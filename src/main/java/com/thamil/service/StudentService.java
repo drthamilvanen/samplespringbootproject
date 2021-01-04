@@ -1,15 +1,20 @@
 package com.thamil.service;
 
+
+
 import com.thamil.dao.StudentDao;
 import com.thamil.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 
 @Service
+
 public class StudentService {
     @Autowired
+    @Qualifier("mongodata")
     private StudentDao studendao;
 
     public Collection<Student> getAllStudents(){

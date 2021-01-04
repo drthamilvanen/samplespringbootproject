@@ -10,7 +10,7 @@ import java.util.Map;
 
 @Repository
 @Qualifier("dummydata")
-public class DummyDataStudentDao implements MongoDBStudentDao {
+public class DummyDataStudentDao implements StudentDao {
     private static Map<Integer, Student> students;
 
     static {
